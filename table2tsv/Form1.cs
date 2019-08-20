@@ -132,6 +132,7 @@ namespace table2tsv
                                 {
                                     href = rootUrlText.Text + href;
                                 }
+                                try { href = Regex.Replace(href, @"&amp;", "&"); } catch (Exception ex) { }
                                 cols.Add(href);
                             }
                         }
